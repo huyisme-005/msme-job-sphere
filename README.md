@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
 
-## Project info
+# MSMEJobSphere - The MSME Job Platform
 
-**URL**: https://lovable.dev/projects/92cba3ed-58d8-4f7b-a437-5ce70634128a
+## What is MSMEJobSphere?
 
-## How can I edit this code?
+MSMEJobSphere is a specialized job platform connecting job seekers with opportunities in Micro, Small, and Medium Enterprises (MSMEs) across India. Our platform makes it easy for candidates to find their perfect role and for MSME businesses to find the talent they need to grow.
 
-There are several ways of editing your application.
+## Features for Job Seekers
 
-**Use Lovable**
+- **Browse Jobs**: Explore hundreds of job opportunities from MSMEs across India
+- **Resume Upload**: Upload your resume to get personalized job matches
+- **Job Filtering**: Find roles that match your skills, location, and preferences
+- **Job Suggestions**: Get AI-powered job recommendations based on your profile
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/92cba3ed-58d8-4f7b-a437-5ce70634128a) and start prompting.
+## Features for Employers
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Post Jobs**: Create and manage job listings tailored to your needs
+- **MSME Solutions**: Access specialized recruitment services designed for small businesses
+- **Candidate Matching**: Find qualified candidates that match your requirements
+- **Flexible Plans**: Choose pricing options that fit your business size and budget
 
-**Use your preferred IDE**
+## How to Use MSMEJobSphere
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### For Job Seekers
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Browse Jobs**: Click on the "Jobs" tab in the navigation menu to see all available positions
+2. **Filter Results**: Use the sidebar filters to narrow down jobs by type, location, or other criteria
+3. **Upload Resume**: Add your resume to get matched with relevant opportunities
+4. **Apply**: Click on any job to view details and apply directly
 
-Follow these steps:
+### For Employers
+
+1. **Explore Solutions**: Visit the "MSME Solutions" section to learn about our recruitment services
+2. **Choose a Plan**: Select a pricing plan that suits your hiring needs
+3. **Post Jobs**: Create detailed job listings to attract the right candidates
+4. **Review Applicants**: Manage and evaluate candidates through your dashboard
+
+## Getting Started with the Project
+
+This project is built with:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Shadcn UI components
+
+### Development Setup
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd msme-job-sphere
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+You can deploy this project by:
 
-**Use GitHub Codespaces**
+1. Opening [Lovable](https://lovable.dev/projects/92cba3ed-58d8-4f7b-a437-5ce70634128a)
+2. Clicking on Share -> Publish
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact Us
 
-## What technologies are used for this project?
+If you have any questions or feedback about MSMEJobSphere, please contact us at:
 
-This project is built with:
+- **Email**: support@msmejobsphere.com
+- **Phone**: +91-XXX-XXX-XXXX
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/92cba3ed-58d8-4f7b-a437-5ce70634128a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built with ❤️ using [Lovable](https://lovable.dev)

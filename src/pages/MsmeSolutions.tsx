@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -7,27 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const MsmeSolutions: React.FC = () => {
-  const testimonials = [
-    {
-      quote: "The specialized MSME recruitment solutions provided a perfect fit for our small business needs. We found top talent within our budget constraints.",
-      author: "Rahul Mehta",
-      position: "Founder, Agritech Solutions",
-      image: null
-    },
-    {
-      quote: "As a medium-sized manufacturing enterprise, finding specialized technical talent was challenging until we partnered with MSMEJobSphere.",
-      author: "Priya Sharma",
-      position: "HR Manager, PrecisionParts Ltd",
-      image: null
-    },
-    {
-      quote: "The flexible hiring options and cost-effective recruitment packages helped us scale our team efficiently during our growth phase.",
-      author: "Ajay Kumar",
-      position: "CEO, CloudStorage MSME",
-      image: null
-    }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -252,42 +230,6 @@ const MsmeSolutions: React.FC = () => {
               <Button className="bg-msme-purple hover:bg-msme-darkPurple">
                 Start Your Hiring Journey
               </Button>
-            </div>
-          </div>
-        </section>
-        
-        {/* Testimonials */}
-        <section className="py-12 md:py-16 bg-msme-lightPurple/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                What MSMEs Say About Us
-              </h2>
-              <p className="text-lg text-gray-600">
-                Success stories from businesses across India
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-white">
-                  <CardContent className="p-6">
-                    <div className="text-msme-purple text-4xl font-serif mb-4">"</div>
-                    <p className="text-gray-700 italic mb-6">
-                      {testimonial.quote}
-                    </p>
-                    <div className="flex items-center">
-                      <div className="h-12 w-12 bg-msme-lightPurple rounded-full flex items-center justify-center text-msme-purple font-bold mr-4">
-                        {testimonial.author.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="font-medium text-gray-900">{testimonial.author}</p>
-                        <p className="text-sm text-gray-500">{testimonial.position}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
