@@ -4,11 +4,17 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import JobFilter from '@/components/jobs/JobFilter';
 import JobCard, { JobProps } from '@/components/jobs/JobCard';
+import ResumeUpload from '@/components/resume/ResumeUpload';
 import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 
 const Jobs: React.FC = () => {
   const [currentFilter, setCurrentFilter] = useState<string>('all');
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
+  // Test case: Verify filter functionality works correctly
+  // Expected result: When 'full-time' is selected, only full-time jobs should be shown
   const allJobs: JobProps[] = [
     {
       id: '1',
@@ -112,6 +118,19 @@ const Jobs: React.FC = () => {
     ? allJobs 
     : allJobs.filter(job => job.jobType.toLowerCase().includes(currentFilter.toLowerCase()));
 
+  const loadMoreJobs = () => {
+    setIsLoading(true);
+    // Simulating API call to load more jobs
+    setTimeout(() => {
+      // In a real implementation, this would append more jobs from an API
+      toast({
+        title: "More jobs loaded",
+        description: "Scroll down to see additional job listings",
+      });
+      setIsLoading(false);
+    }, 1000);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -166,9 +185,10 @@ const Jobs: React.FC = () => {
           </div>
           
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* Sidebar Filters */}
-            <div className="lg:w-1/4">
+            {/* Sidebar Filters and Resume Upload */}
+            <div className="lg:w-1/4 space-y-6">
               <JobFilter />
+              <ResumeUpload />
             </div>
             
             {/* Job Listings */}
@@ -200,8 +220,13 @@ const Jobs: React.FC = () => {
               
               {filteredJobs.length > 0 && (
                 <div className="mt-8 flex justify-center">
-                  <Button variant="outline" className="border-msme-purple text-msme-purple hover:bg-msme-lightPurple/50">
-                    Load More Jobs
+                  <Button 
+                    variant="outline" 
+                    className="border-msme-purple text-msme-purple hover:bg-msme-lightPurple/50"
+                    onClick={loadMoreJobs}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Loading..." : "Load More Jobs"}
                   </Button>
                 </div>
               )}

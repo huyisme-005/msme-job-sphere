@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { toast } = useToast();
   
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -18,6 +20,13 @@ const Navbar: React.FC = () => {
     { path: '/msme-solutions', label: 'MSME Solutions' },
     { path: '/about', label: 'About' },
   ];
+
+  const handleAuthClick = (action: string) => {
+    toast({
+      title: `${action} functionality`,
+      description: `The ${action.toLowerCase()} feature will be implemented soon`,
+    });
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
@@ -47,10 +56,17 @@ const Navbar: React.FC = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="outline" className="border-msme-purple text-msme-purple hover:bg-msme-lightPurple">
+            <Button 
+              variant="outline" 
+              className="border-msme-purple text-msme-purple hover:bg-msme-lightPurple"
+              onClick={() => handleAuthClick('Sign In')}
+            >
               Sign In
             </Button>
-            <Button className="bg-msme-purple hover:bg-msme-darkPurple">
+            <Button 
+              className="bg-msme-purple hover:bg-msme-darkPurple"
+              onClick={() => handleAuthClick('Register')}
+            >
               Register
             </Button>
           </div>
@@ -88,10 +104,23 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <div className="flex flex-col space-y-2 pt-2">
-              <Button variant="outline" className="border-msme-purple text-msme-purple">
+              <Button 
+                variant="outline" 
+                className="border-msme-purple text-msme-purple"
+                onClick={() => {
+                  handleAuthClick('Sign In');
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Sign In
               </Button>
-              <Button className="bg-msme-purple hover:bg-msme-darkPurple">
+              <Button 
+                className="bg-msme-purple hover:bg-msme-darkPurple"
+                onClick={() => {
+                  handleAuthClick('Register');
+                  setMobileMenuOpen(false);
+                }}
+              >
                 Register
               </Button>
             </div>
