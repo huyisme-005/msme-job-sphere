@@ -4,9 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import AuthDialog from '@/components/auth/AuthDialog';
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const location = useLocation();
   const { toast } = useToast();
   
@@ -21,11 +24,9 @@ const Navbar: React.FC = () => {
     { path: '/about', label: 'About' },
   ];
 
-  const handleAuthClick = (action: string) => {
-    toast({
-      title: `${action} functionality`,
-      description: `The ${action.toLowerCase()} feature will be implemented soon`,
-    });
+  const handleAuthClick = (action: 'Sign In' | 'Register') => {
+    setAuthMode(action === 'Sign In' ? 'signin' : 'signup');
+    setAuthDialogOpen(true);
   };
 
   return (
@@ -127,6 +128,12 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Auth Dialog */}
+      <AuthDialog 
+        open={authDialogOpen}
+        onOpenChange={setAuthDialogOpen}
+      />
     </nav>
   );
 };

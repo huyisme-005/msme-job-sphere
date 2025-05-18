@@ -1,13 +1,15 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Search, MapPin, Briefcase } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleBrowseJobs = () => {
     // Navigate to jobs page
-    window.location.href = '/jobs';
+    navigate('/jobs');
   };
 
   return (

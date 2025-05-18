@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import JobSuggestions from '@/components/jobs/JobSuggestions';
+import SectionTutorial from '@/components/tutorial/SectionTutorial';
 
 const Index: React.FC = () => {
   const categories = [
@@ -17,6 +18,30 @@ const Index: React.FC = () => {
     { name: "Operations", count: 156, icon: "⚙️" },
     { name: "Sales", count: 143, icon: "📈" },
     { name: "Creative", count: 127, icon: "🎨" }
+  ];
+  
+  // Tutorial steps for homepage
+  const homeTutorialSteps = [
+    {
+      title: "Welcome to MSMEJobSphere",
+      description: "Your gateway to careers in Micro, Small, and Medium Enterprises across India"
+    },
+    {
+      title: "Quick Job Search",
+      description: "Use the search form to quickly find jobs matching your skills and location"
+    },
+    {
+      title: "Job Categories",
+      description: "Browse jobs by category to find opportunities in your field"
+    },
+    {
+      title: "Get Personalized Job Suggestions",
+      description: "Upload your resume and skills to get AI-powered job recommendations"
+    },
+    {
+      title: "Need Help?",
+      description: "Click the AI Copilot icon in the bottom right corner for instant assistance"
+    }
   ];
 
   return (
@@ -56,7 +81,7 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* Job Suggestion Section (new) */}
+        {/* Job Suggestion Section */}
         <JobSuggestions />
         
         {/* MSME Solutions Preview */}
@@ -78,6 +103,12 @@ const Index: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        {/* Tutorial Component */}
+        <SectionTutorial
+          sectionId="home"
+          steps={homeTutorialSteps}
+        />
       </main>
       
       <Footer />
