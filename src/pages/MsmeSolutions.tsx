@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -76,30 +77,6 @@ const MsmeSolutions: React.FC = () => {
                 <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                   View Plans
                 </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Stats Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-msme-purple mb-2">500+</div>
-                <div className="text-gray-600">MSME Partners</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-msme-purple mb-2">₹15L+</div>
-                <div className="text-gray-600">Avg. Savings per MSME</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-msme-purple mb-2">85%</div>
-                <div className="text-gray-600">Successful Placements</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-msme-purple mb-2">14 Days</div>
-                <div className="text-gray-600">Avg. Time to Hire</div>
               </div>
             </div>
           </div>
