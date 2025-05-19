@@ -5,53 +5,104 @@ MSMEJobSphere connects job seekers with opportunities in Micro, Small, and Mediu
 
 ![MSMEJobSphere Platform](https://placeholder.pics/svg/800x400/DEDEDE/555555/MSME%20Job%20Sphere)
 
-## 🚀 Quick Start for Users
+## 🚀 Quick Start Guides
 
 ### For Job Seekers
 
-1. **Browse Jobs**: Visit the "Jobs" page to see all available positions
-2. **Filter Results**: Use the sidebar filters to find jobs by type, location, or keywords
-3. **Upload Resume**: Add your resume to get matched with relevant opportunities
-4. **Apply**: Click on any job to view details and apply directly
-5. **Get AI Assistance**: Use our AI Copilot (chat icon in bottom right) for personalized job recommendations
+1. **Create Your Account**
+   - Click "Sign In" in the top-right corner
+   - Choose your preferred login method (Google, LinkedIn, Email)
+   - Complete your basic profile information
 
-### For Employers
+2. **Upload Your Resume**
+   - Go to your profile page
+   - Click on "Upload Resume"
+   - Our AI will automatically extract your skills and experience
 
-1. **Post Jobs**: Sign up and create detailed job listings
-2. **Find Candidates**: Get AI-powered candidate matches based on your requirements
-3. **Review Applications**: Manage applications through your dashboard
-4. **Get Recruitment Help**: Visit "MSME Solutions" to learn about our recruitment services
+3. **Find Your Perfect Job**
+   - Use the search bar or filters on the Jobs page
+   - Filter by location, job type, and salary range
+   - Click on any job to view details and apply
 
-## 📱 Mobile App Access
+4. **Get AI Assistance**
+   - Click the chat icon in the bottom-right corner
+   - Ask our AI Copilot for job recommendations
+   - Get feedback on your resume or application
+
+5. **Set Up Job Alerts**
+   - Define your job preferences
+   - Choose how often you want to receive alerts
+   - Get notified when matching jobs are posted
+
+### For Employers/Recruiters
+
+1. **Create Your Company Profile**
+   - Sign up and verify your business details
+   - Add your company description and logo
+   - Specify your industry and company size
+
+2. **Post Your First Job**
+   - Click "Post a Job" from your dashboard
+   - Fill in the job details (title, description, requirements)
+   - Set location, compensation, and application deadline
+
+3. **Find Qualified Candidates**
+   - Use AI-powered candidate matching
+   - Filter candidates by skills, experience, or location
+   - Review applications through your dashboard
+
+4. **Connect With Potential Hires**
+   - Schedule interviews directly through the platform
+   - Use our messaging system for quick communication
+   - Get AI suggestions on candidate fit
+
+5. **Access MSME Specific Resources**
+   - Visit the "MSME Solutions" page
+   - Explore hiring tools designed for small businesses
+   - Get guidance on recruitment best practices
+
+## 📱 Mobile Access
 
 MSMEJobSphere works on all devices:
 
 - **Web Browser**: Visit our website on any desktop or mobile browser
-- **Mobile App**: Download our app from the App Store or Google Play (coming soon)
+- **Mobile App**: Download our app for iOS or Android
+  - App Store: [Coming Soon]
+  - Google Play: [Coming Soon]
+  - For testing, follow the Developer section below
 
-## 🔐 Account Features
+## 🌟 Key Features
 
-- **Easy Sign Up**: Register with email, Google, or LinkedIn
-- **Resume Upload**: Store your resume for quick applications
-- **Job Alerts**: Get notified about matching opportunities
+- **AI-Powered Matching**: Smart algorithm connects the right candidates with the right jobs
+- **Interactive Tutorials**: Guided tours available for each section (click the "Take a Tour" button)
+- **Voice Commands**: Use voice to search for jobs or candidates
 - **Two-Factor Authentication**: Optional extra security for your account
+- **Multi-Platform**: Access via web or mobile app
+- **Resume Analyzer**: Upload your resume to get matched with relevant opportunities
 
-## 🔍 Finding the Right Job
+## 🔒 Privacy & Security
 
-1. **Search by Keywords**: Enter job titles, skills, or companies
-2. **Location Filter**: Find jobs in your city or remote opportunities
-3. **Salary Range**: Filter by expected compensation
-4. **Job Type**: Choose full-time, part-time, or internship positions
-5. **AI Matching**: Get personalized job recommendations based on your profile
+- Your data is stored securely using industry-standard encryption
+- Two-factor authentication available for enhanced account security
+- Control exactly what information is visible to employers or candidates
+- Option to anonymize your profile for initial job searches
 
-## 💼 MSME Solutions
+## 🛠️ Current Limitations & Future Improvements
 
-If you're a small or medium business looking to hire:
+### Known Issues
+- **Social Login**: Currently using mock implementations; will be replaced with actual OAuth providers
+- **Resume Parsing**: Basic functionality only; advanced matching coming soon
+- **Mobile App**: Beta version available; some features may be limited
+- **Payment Processing**: Not yet implemented for premium plans
+- **Internationalization**: Currently supports English only
 
-1. **Choose a Plan**: Select from our flexible pricing options
-2. **Post Jobs**: Create and publish job listings
-3. **Get Matched**: Our AI helps you find qualified candidates
-4. **Hiring Assistance**: Get support throughout your recruitment process
+### Coming Soon
+- Real-time chat between employers and candidates
+- Video interview integration
+- Advanced analytics for job postings
+- Skill assessment tests
+- Integration with popular Applicant Tracking Systems
+- Support for multiple languages
 
 ## 💬 Getting Help
 
@@ -64,7 +115,7 @@ If you're a small or medium business looking to hire:
 This project is built with:
 
 ```
-React + TypeScript + Vite + Tailwind CSS + Shadcn UI
+React + TypeScript + Vite + Tailwind CSS + Shadcn UI + Supabase
 ```
 
 ### Development Setup
@@ -86,20 +137,13 @@ npm run dev
 ### Mobile Development
 
 ```sh
-# Install Capacitor
-npm install @capacitor/core @capacitor/ios @capacitor/android
-
-# Initialize Capacitor
-npx cap init
+# Install dependencies
+npm install
 
 # Build the project
 npm run build
 
-# Add platforms
-npx cap add ios
-npx cap add android
-
-# Sync project
+# Sync with Capacitor (after build)
 npx cap sync
 
 # Open native IDEs
@@ -107,6 +151,15 @@ npx cap open ios     # For iOS (requires macOS)
 npx cap open android # For Android
 ```
 
+### Environment Variables
+Create a `.env` file in the root directory with:
+
+```
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
 ---
 
 Built with ❤️ using [Lovable](https://lovable.dev)
+
